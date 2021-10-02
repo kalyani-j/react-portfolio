@@ -1,0 +1,268 @@
+:root {
+  --lavender: #b2b7ff;
+  --dark: #2f365f;
+  --body-main: #eeeeee;
+  --section: #dfcba7;
+}
+
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--body-main);
+  font-size: 18px;
+}
+
+header {
+  background-color: var(--dark);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.nav-item > a {
+  color: #fff;
+}
+
+.nav-item > a:hover {
+  color: rgb(216, 216, 216);
+}
+
+h1 {
+  font-size: 30px;
+  border: 10px 0;
+}
+
+main {
+  display: flex;
+  background-color: var(--light);
+}
+
+/*About*/
+
+#about .heading {
+  width: 100%;
+  padding: 15px;
+}
+
+#about .title {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+#about .desc {
+  font-size: 18px;
+}
+
+#about .avatar {
+  width: 25%;
+  box-shadow: -4px 7px 15px 1px rgb(0 0 0 / 20%);
+}
+
+/*Technical skills*/
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  padding: 15px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.tech-stack .title {
+  font-weight: 900;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.tech-stack .skill-set {
+  border: 1px solid var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  font-size: 14px;
+  color: var(--dark);
+  margin: 0.4rem 0.6rem 0.4rem 0;
+}
+
+.tech-stack .skill-set:hover {
+  background: var(--lavender);
+}
+
+/*Projects*/
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.projects .title {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.projects .project-lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  width: 98%;
+}
+
+.projects .project-details {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 5px;
+  border: 1px solid var(--dark);
+  box-shadow: 4px 6px #888888;
+}
+
+.project-details img {
+  width: 100%;
+}
+
+.project-lists .project-details p {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.project-lists .project-details .desc {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.projects .project-lists .project-details:first-child {
+  width: 70%;
+}
+
+.projects .project-lists .project-details:hover {
+  background-color: var(--section);
+  width: 70%;
+  box-shadow: 8px 10px #888888;
+}
+
+#project-lists .card-text {
+    font-size: 14px;
+}
+
+.project-imgcard {
+  height: 225px;
+  width: 100%;
+  display: block;
+}
+
+/*Contact section*/
+
+.social-network {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: var(--dark);
+  color: #fff;
+}
+
+.contact .social-network .fa-twitter {
+  color: white;
+}
+
+.fab {
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  color: #fff;
+}
+
+.fa-linkedin {
+  color: #fff;
+}
+
+.contact .social-network .fa-github {
+  color: white;
+}
+
+/*Responsive Web - Media queries*/
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .left-nav {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .right-nav {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 10px;
+  }
+
+  .right-content .avatar {
+    width: 100%;
+  }
+
+  .tech-stack .skills {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .tech-stack .skills-set {
+    margin: 5px 0;
+  }
+
+  .projects .project-lists {
+    flex-direction: column;
+  }
+
+  .projects .project-details {
+    width: 80%;
+  }
+
+  .projects .project-lists .project-details:first-child {
+    width: 80%;
+  }
+
+  .contact {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-form .contact-form-input {
+    width: 86%;
+  }
+}
+
