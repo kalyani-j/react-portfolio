@@ -6,7 +6,7 @@ const ProjectList = () => {
     {
       projectTitle: 'Investor Portfolio',
       projectDesc:
-        'A full stack application which allows users to login and manage portfolios of stocks.',
+        'Full stack application for users to manage portfolios of stocks.',
       projecImg: '/assets/images/investor-portfolio.png',
       projectTechstack: [
         'HTML',
@@ -86,8 +86,8 @@ const ProjectList = () => {
         University.
       </p>
       <div className="row" id="project-lists">
-        {projectDetails.map((p) => (
-          <Project details={p}></Project>
+        {projectDetails.map((p, i) => (
+          <Project key={i} details={p}></Project>
         ))}
       </div>
     </div>

@@ -47,10 +47,6 @@ main {
   box-shadow: -4px 7px 15px 1px rgb(0 0 0 / 20%);
 }
 
-/*Technical skills*/
-
-
-
 /*Projects*/
 .projects {
   display: flex;
@@ -208,6 +204,9 @@ main {
   .contact {
     flex-direction: column;
     padding-left: 10px;
+    position: sticky;
+    bottom: 0px;
+    z-index: 2000;
   }
 
   .contact-form {

@@ -9,10 +9,10 @@ const About = () => {
       </div>
       <div className="heading">
         <div className="title" id="about-me">
-          👩‍💻 About me
+          👩‍💻  Hi, I am Kalyani
         </div>
         <div className="desc">
-          Hey, I am Kalyani. Web Development is my passion. I am pursuing Full
+          Web Development is my passion. I am pursuing Full
           Stack Web Developer Coding Bootcamp at Rutgers University, New Jersey.
           I have over thirteen (13) years of experience in the field of
           Information Technology, working in diverse roles: Developer, Scrum

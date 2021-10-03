@@ -1,4 +1,5 @@
 import React from 'react';
+import './project.css';
 
 const Project = ({ details }) => {
   const { gitHubURL, projectTitle, projecImg, projectDesc, deployLink } = details;
@@ -22,14 +23,14 @@ const Project = ({ details }) => {
             title={gitHubURL}
             target="_blank"
           >
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
           </a>
           <a
             href={deployLink}
             title={deployLink}
             target="_blank"
           >
-            <i class="fas fa-server"></i>
+            <i className="fas fa-server"></i>
           </a>
         </div>
       </div>

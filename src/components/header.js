@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './header.css';
 
 const Header = () => {
@@ -24,19 +26,24 @@ const Header = () => {
           >
             <ul className="navbar-nav ml-auto mb-2 mb-md-0">
               <li className="nav-item">
-                <a className="nav-link" href="#about-me">
-                  About me
-                </a>
+                <HashLink to="/#about-me" className="nav-link">
+                  About
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#skill">
+                <HashLink to="/#skill" className="nav-link">
                   Skills
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#projects">
+                <HashLink to="/#projects" className="nav-link">
                   Projects
-                </a>
+                </HashLink>
+              </li>
+              <li className="nav-item">
+                <Link to="/experience" className="nav-link">
+                  Experience
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#contact">

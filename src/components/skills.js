@@ -23,8 +23,8 @@ const Skills = () => {
         <div className="title">🚀 Skills</div>
         <div className="d-flex flex-wrap">
           {skills
-            .map((s) => {
-              return <div class="skill-set">{s}</div>;
+            .map((s,i) => {
+              return <div key={i} className="skill-set">{s}</div>;
             })}
         </div>
       </div>
