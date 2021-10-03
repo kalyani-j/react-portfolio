@@ -15,21 +15,6 @@ body {
   font-size: 18px;
 }
 
-header {
-  background-color: var(--dark);
-  width: 100%;
-  color: #fff;
-  text-align: center;
-}
-
-.nav-item > a {
-  color: #fff;
-}
-
-.nav-item > a:hover {
-  color: rgb(216, 216, 216);
-}
-
 h1 {
   font-size: 30px;
   border: 10px 0;
@@ -63,38 +48,7 @@ main {
 
 /*Technical skills*/
 
-.tech-stack {
-  display: flex;
-  flex-direction: column;
-  width: 98%;
-  padding: 15px;
-  font-size: 20px;
-  margin-top: 20px;
-}
 
-.tech-stack .title {
-  font-weight: 900;
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-.tech-stack .skill-set {
-  border: 1px solid var(--dark);
-  border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0.4rem 0.8rem;
-  font-size: 14px;
-  color: var(--dark);
-  margin: 0.4rem 0.6rem 0.4rem 0;
-}
-
-.tech-stack .skill-set:hover {
-  background: var(--lavender);
-}
 
 /*Projects*/
 .projects {

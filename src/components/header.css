@@ -1,0 +1,14 @@
+header {
+  background-color: var(--dark);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.nav-item > a {
+  color: #fff;
+}
+
+.nav-item > a:hover {
+  color: rgb(216, 216, 216);
+}
