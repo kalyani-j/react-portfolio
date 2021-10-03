@@ -3,6 +3,7 @@
   --dark: #2f365f;
   --body-main: #eeeeee;
   --section: #dfcba7;
+  --light: #f8f9fa;
 }
 
 * {
@@ -22,7 +23,7 @@ h1 {
 
 main {
   display: flex;
-  background-color: var(--light);
+  background: var(--light);
 }
 
 /*About*/
