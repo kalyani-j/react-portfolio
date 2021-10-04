@@ -1,14 +1,14 @@
-
-.empHistory {
+.experience {
     font-weight: bold;
 }
+/* 
+#empHistory {
+    font-weight: bold;
+} */
 
 .empName {
     background: #b2b7ff;
-}
-
-.experience {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .expDetails {
