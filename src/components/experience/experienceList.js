@@ -6,9 +6,9 @@ const ExperienceList = () => {
   const [experienceDetails, setExperienceDetails] = useState([]);
   useEffect(() => {
     fetch('/api/experiences')
-    .then(results => results.json())
-    .then(data => setExperienceDetails(data))
-  })
+      .then((results) => results.json())
+      .then((data) => setExperienceDetails(data));
+  }, []);
   return (
     <div className="p-4" id="experience">
       <div className="experience">Work Experience</div>

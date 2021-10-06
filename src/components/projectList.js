@@ -7,7 +7,7 @@ const ProjectList = () => {
     fetch('/api/projects')
       .then((results) => results.json())
       .then((data) => setProjectDetails(data));
-  });
+  }, []);
   return (
     <div className="projects p-4" id="projects">
       <div className="title">Projects</div>
