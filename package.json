@@ -23,7 +23,8 @@
   },
   "proxy": "http://localhost:3001",
   "scripts": {
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start": "npm run start:server",
+    "start:debug": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "node --experimental-modules --es-module-specifier-resolution=node server/server.js",
     "start:seed": "node --experimental-modules --es-module-specifier-resolution=node server/seeders/projectSeed.js",
     "start:client": "set PORT=3000 && react-scripts start",
