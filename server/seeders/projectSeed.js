@@ -1,6 +1,11 @@
-let mongoose = require('mongoose');
-let db = require('../models');
-require('dotenv').config();
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import path from 'path';
+
+dotenv.config({ path: path.join(path.resolve(), '.env') });
+
+import Projects from '../models/projects';
+import Experience from '../models/experience';
 
 mongoose.connect(process.env.DB_URL);
 
@@ -81,10 +86,76 @@ const projectSeed = [
   },
 ];
 
-db.Projects.deleteMany({})
-  .then(() => db.Projects.collection.insertMany(projectSeed))
+Projects.deleteMany({})
+  .then(() => Projects.collection.insertMany(projectSeed))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
+    console.log("Project records inserted!");
+  })
+  .catch(err => {
+    console.error(err);
+  });
+
+  
+const experienceSeed = [
+  {
+    employerName: 'ClientServer Tech Solutions, Iselin, NJ, USA',
+    period: 'Jul 17- Jun 21',
+    role: 'Scrum Master/ Business Analyst',
+    techStack: `Net Core,
+      ASP.NET MVC,
+      HTML,
+      CSS,
+      JavaScript,
+      jQuery,
+      Microsoft Azure,
+      SQL Server,
+      Selenium,
+      Jira,
+      Git,
+      GitHub`,
+  },
+  {
+    employerName: 'L&T Infotech (LTI), PA, USA and Mumbai, India',
+    period: 'Nov 09- Dec 14',
+    role: 'Business Analyst/ QA Lead',
+    techStack: `Guidewire Claims Center,
+      Guidewire Policy Center,
+      JIRA,
+      HP ALM,
+      HP UFT,
+      Share Point,
+      SVN,
+      Java,
+      Gosu,
+      SQL Server`,
+  },
+  {
+    employerName: 'Auditime Information Systems (I) Ltd., Mumbai, India',
+    period: 'Jul 07 – Nov 09',
+    role: 'QA Team Lead',
+    techStack: `IIMS, ASP.NET, Oracle 9i`,
+  },
+  {
+    employerName: 'Eclerx, Mumbai, India',
+    period: 'Feb 07 – Jul 07',
+    role: 'QA Tester',
+    techStack: `Dell Horizon,
+      SharePoint,
+      HP Quality Center,
+      MS Excel`,
+  },
+  {
+    employerName: 'Dyna Hi-Tech Power Systems Ltd., Mumbai, India',
+    period: 'Apr 05 – Oct 06',
+    role: 'QA Tester',
+    techStack: `MS Excel`,
+  },
+];
+
+Experience.deleteMany({})
+  .then(() => Experience.collection.insertMany(experienceSeed))
+  .then(data => {
+    console.log("Experience records inserted!");
     process.exit(0);
   })
   .catch(err => {
