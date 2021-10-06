@@ -1,64 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Experience from './experience';
 import './experience.css';
 
 const ExperienceList = () => {
-  const experienceDetails = [
-    {
-      employerName: 'ClientServer Tech Solutions, Iselin, NJ, USA',
-      period: 'Jul 17- Jun 21',
-      role: 'Scrum Master/ Business Analyst',
-      techStack: `Net Core,
-        ASP.NET MVC,
-        HTML,
-        CSS,
-        JavaScript,
-        jQuery,
-        Microsoft Azure,
-        SQL Server,
-        Selenium,
-        Jira,
-        Git,
-        GitHub`,
-    },
-    {
-      employerName: 'L&T Infotech (LTI), PA, USA and Mumbai, India',
-      period: 'Nov 09- Dec 14',
-      role: 'Business Analyst/ QA Lead',
-      techStack: `Guidewire Claims Center,
-        Guidewire Policy Center,
-        JIRA,
-        HP ALM,
-        HP UFT,
-        Share Point,
-        SVN,
-        Java,
-        Gosu,
-        SQL Server`,
-    },
-    {
-      employerName: 'Auditime Information Systems (I) Ltd., Mumbai, India',
-      period: 'Jul 07 – Nov 09',
-      role: 'QA Team Lead',
-      techStack: `IIMS, ASP.NET, Oracle 9i`,
-    },
-    {
-      employerName: 'Eclerx, Mumbai, India',
-      period: 'Feb 07 – Jul 07',
-      role: 'QA Tester',
-      techStack: `Dell Horizon,
-        SharePoint,
-        HP Quality Center,
-        MS Excel`,
-    },
-    {
-      employerName: 'Dyna Hi-Tech Power Systems Ltd., Mumbai, India',
-      period: 'Apr 05 – Oct 06',
-      role: 'QA Tester',
-      techStack: `MS Excel`,
-    },
-  ];
-
+  const [experienceDetails, setExperienceDetails] = useState([]);
+  useEffect(() => {
+    fetch('/api/experiences')
+    .then(results => results.json())
+    .then(data => setExperienceDetails(data))
+  })
   return (
     <div className="p-4" id="experience">
       <div className="experience">Work Experience</div>

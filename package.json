@@ -26,7 +26,7 @@
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "node --experimental-modules --es-module-specifier-resolution=node server/server.js",
     "start:seed": "node --experimental-modules --es-module-specifier-resolution=node server/seeders/projectSeed.js",
-    "start:client": "react-scripts start",
+    "start:client": "set PORT=3000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test"
   },
