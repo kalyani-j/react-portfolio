@@ -33,10 +33,10 @@ The application React Portfolio is covered under MIT https://opensource.org/lice
 
 ### Author
 
-- This portfolio has been developed by Kalyani Joshi [GitHub](https://github.com/kay-code-1)
+- This portfolio has been developed by [Kalyani Joshi](https://github.com/kay-code-1)
 
 ### Links
 
 Repository: https://github.com/Kay-code-1/react-portfolio.git
 
-Deployment Link: 
+Deployment Link: [Kalyani Joshi Portfolio](https://react-portfolio-kalyani-joshi.herokuapp.com/)
